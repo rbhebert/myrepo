@@ -13,10 +13,10 @@ state_list = append(state.abb,"DC")
 #### Set search and download parameters
 
 # Set topic
-topic = "hearing aid"
+topic = "hearing%20aid"
 
 # Set starting year
-initialYear = "2017"
+initialYear = 2017
 
 # Set starting month
 initialMonth = 1
@@ -93,4 +93,4 @@ for (i in state_list) {
 # 
 # https://trends.google.com/trends/explore?date=2017-01-01%202022-08-31&geo=US-AZ&q=hearing%20aid
 # 
-# https://trends.google.com/trends/trendsReport?hl=en-US&q=hearing%20aid&geo=US-AL&date=1%2F2017%2069m&cmpt=q&content=1&export=1
+# https://trends.google.com/trends/explore?date=today%205-y&geo=US-WY&q=%2Fm%2F02kzw4
