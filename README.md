@@ -1,5 +1,3 @@
 # myrepo
-Testing repository 
-This is a line from RStudio.
 
-adding as a test
+Various code snippets and files. No particular theme or order.
