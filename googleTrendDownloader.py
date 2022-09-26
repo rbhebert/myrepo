@@ -43,14 +43,16 @@ df2.remove("Keywords")
 dataset = []
 
 # Enter time frame here
-time_range = '2017-01-01 2019-12-28'
+time_range = '2019-12-29 2022-09-25'
 
-# state_list = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL",
-#               "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
-#               "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE",
-#               "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
-#               "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT",
-#               "VA", "WA", "WV", "WI", "WY", "DC"]
+# time_range = '2017-01-01 2019-12-28'
+
+state_list = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL",
+              "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
+              "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE",
+              "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
+              "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT",
+              "VA", "WA", "WV", "WI", "WY", "DC"]
 
 # state_list = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL"]
 #
@@ -60,7 +62,7 @@ time_range = '2017-01-01 2019-12-28'
 #
 # state_list = ["NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK"]
 #
-state_list = ["OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT"]
+# state_list = ["OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT"]
 #
 # state_list = ["VA", "WA", "WV", "WI", "WY", "DC"]
 
@@ -75,7 +77,7 @@ for x in range(0,len(df2)):
          timeframe=time_range,
          geo='US-'+state_list[y])
 
-         time.sleep(y+1) # used to avoid 429 error from google
+         time.sleep(min((y+1),20)) # used to avoid 429 error from google
 
          data = pytrend.interest_over_time()
          if not data.empty:
